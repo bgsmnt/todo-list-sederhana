@@ -241,7 +241,6 @@ li:hover {
     }
 }
 
-/* Tambahkan ini di bagian atas file CSS */
 html, body {
     height: 100%;
     margin: 0;
@@ -255,18 +254,20 @@ body {
     display: flex;
     flex-direction: column;
     transition: background-color 0.3s ease;
+    padding: 0 20px; /* Tambahkan padding horizontal */
 }
 
 .container {
     flex: 1 0 auto;
     max-width: 600px;
-    width: 90%;
+    width: 100%; /* Ubah menjadi 100% */
     margin: 40px auto;
     background-color: var(--container-bg);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    box-sizing: border-box; /* Tambahkan ini */
 }
 
 /* ... (kode CSS lainnya tetap sama) ... */
@@ -295,11 +296,14 @@ footer a:hover {
 
 /* Penyesuaian untuk tampilan mobile */
 @media screen and (max-width: 600px) {
+    body {
+        padding: 0 10px; /* Kurangi padding pada mobile */
+    }
+
     .container {
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
+        margin: 20px 0;
         padding: 20px;
+        border-radius: 5px; /* Kurangi border radius pada mobile */
     }
 
     footer {
