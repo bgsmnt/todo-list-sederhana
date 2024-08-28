@@ -240,3 +240,69 @@ li:hover {
         padding: 10px;
     }
 }
+
+/* Tambahkan ini di bagian atas file CSS */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    flex: 1 0 auto;
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* ... (kode CSS lainnya tetap sama) ... */
+
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Penyesuaian untuk tampilan mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+}
